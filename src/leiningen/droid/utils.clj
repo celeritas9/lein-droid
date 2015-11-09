@@ -262,7 +262,7 @@
 
 ;; ### General utilities
 
-(defn proj [] (read-project "../test-lein-droid/project.clj"))
+(defn proj [] (read-project "project.clj"))
 
 (defn sdk-version-number
   "If version keyword is passed (for example, `:ics` or `:jelly-bean`), resolves

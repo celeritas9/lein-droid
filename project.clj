@@ -1,6 +1,6 @@
-(defproject lein-droid/lein-droid "0.4.2-SNAPSHOT"
-  :description "Plugin for easy Clojure/Android development and deployment"
-  :url "https://github.com/clojure-android/lein-droid"
+(defproject org.clojars.celeritas9/lein-droid "1.0.1"
+  :description "Plugin for easy Clojure/Android incremental development and deployment"
+  :url "https://github.com/celeritas9/lein-droid/tree/inc-build"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[robert/hooke "1.3.0"]

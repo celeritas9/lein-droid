@@ -12,7 +12,7 @@
 
    Latest release:
 
-[[https://clojars.org/lein-droid][https://clojars.org/lein-droid/latest-version.svg]]
+[![Clojars Project](http://clojars.org/org.clojars.celeritas9/lein-droid/latest-version.svg)](http://clojars.org/org.clojars.celeritas9/lein-droid)
 
 ** Documentation
 
