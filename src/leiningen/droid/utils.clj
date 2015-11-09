@@ -85,6 +85,7 @@
   the absolute path, i.e. it cannot have drive letter. Hence, we need to just pass in the resource name
   to change. Hence, extracting resource."
   [old-name new-name]
+  (debug "Renaming resource" old-name "to" new-name)
   (let [os (platform)]
     (case os
       "macosx" (:out (shell/sh "mv" old-name new-name))
@@ -262,7 +263,7 @@
 
 ;; ### General utilities
 
-(defn proj [] (read-project "project.clj"))
+(defn proj [] (read-project "../fa/project.clj"))
 
 (defn sdk-version-number
   "If version keyword is passed (for example, `:ics` or `:jelly-bean`), resolves
