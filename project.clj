@@ -1,4 +1,4 @@
-(defproject org.clojars.celeritas9/lein-droid "1.1.0-SNAPSHOT"
+(defproject org.clojars.celeritas9/lein-droid "1.1.1"
   :description "Plugin for easy Clojure/Android incremental development and deployment"
   :url "https://github.com/celeritas9/lein-droid/tree/inc-build"
   :license {:name "Eclipse Public License"
