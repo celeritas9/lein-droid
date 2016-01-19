@@ -372,9 +372,9 @@
   that was recently modified. If the directory is empty
   then return the timestamp of the outermost directory as the placeholder."
   [dir]
+  (debug "Directory" (walk dir))
   (let [timestamps (map #(.lastModified %) (walk dir))]
-    (debug "Timestamps in" dir "are" timestamps)
-    (if (empty timestamps)
+    (if (empty? timestamps)
       (.lastModified dir)
       (apply max timestamps))))
 
@@ -383,6 +383,7 @@
   recorded. Return false iff recorded timestamp is same as the one
   that's read recently."
   [timestamp-file subtask input-file]
+  (debug "file-modified? input-file is" input-file)
   (if (not (.exists timestamp-file))
     true
     (let [input-file-time (if (.isDirectory input-file)
@@ -401,7 +402,7 @@
   (partial file-modified? timestamp-file subtask))
 
 (defn input-modified?
-  "Check if some of the given input files/files in dirs are modified. Return true if
+  "Check if some of the given input file/s in dirs are modified. Return true if
   at least one file has been modified."
   [timestamp-file-name subtask input-path-names]
   (let [input-paths (map io/file input-path-names)
