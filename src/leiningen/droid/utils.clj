@@ -263,7 +263,7 @@
 
 ;; ### General utilities
 
-(defn proj [] (read-project "../fa/project.clj"))
+(defn proj [] (read-project "./project.clj"))
 
 (defn sdk-version-number
   "If version keyword is passed (for example, `:ics` or `:jelly-bean`), resolves
